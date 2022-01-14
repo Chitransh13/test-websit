@@ -1,0 +1,278 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin: auto;
+}
+body{
+    font-family: sans-serif;
+}
+.nav-menu:not(.button) a:hover,
+.nav-menu a:hover::after {
+    color: #ccc;
+}
+
+
+hr{
+    border: 3px solid gray;
+    width: 4%;
+    margin: 3%;
+}
+.top{
+    background-image: url("top.jpg");
+    height: 100vh ;
+    background-repeat: no-repeat;
+    width: 100% ;
+    background-size: 100% 100%;
+   
+}
+.middle1{
+    width: 100% ;
+    height: 100vh ;
+    padding-left: 5%;
+    padding-right: 5%;
+   
+    
+}
+.middle2{
+    background-color: #edf0f1;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100% ;
+    height: 100% ;
+    padding-top: 3%;
+    padding-bottom: 3%;    
+}
+.featured{
+    margin: 3%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.featured p{
+    font-size: 200%;
+}
+.featured a{
+    font-size: 120%;
+    text-decoration: none;
+    color: black;
+}
+.feat_jobs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin: 3%;
+    width: 100%;
+}
+.box{
+    background-color: #edf0f1;
+    width: 20% ;
+    height: 35% ;
+    text-align: center;
+    padding: 2%;
+    border: 0.5px solid lightgray;
+}
+.box h4{
+    font-size: 120%;
+}
+.box p,i{
+    color: gray;
+}
+.box a{
+    text-decoration: none;
+    color: black;
+
+    bottom:10%;
+}
+.box2{
+    background-color: white;
+    width: 20% ;
+    height: 35% ;
+    text-align: center;
+    padding-bottom: 2%;
+    border: 0.5px solid lightgray;
+}
+.box2 h4{
+    font-size: 120%;
+}
+.box2 p,i{
+    color: gray;
+}
+.clogo{
+    border-radius: 50%;
+    width: 5vw;
+    height: 10vh;
+}
+.clogo2{
+    width: 100%;
+    height: 28vh;
+}
+.bottom{
+    background-image: url("bottom-back.jpg");
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#bt{
+    width: 30%;
+    height: 20%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+#bt a{
+    text-decoration: none;
+    color: white;
+    font-size: 200%;
+}
+.foot{
+    width: 100%;
+    height: 35vh;
+    background-color: #edf0f1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.bottom-nav {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-nav a{
+    text-decoration: none;
+    color: black;
+}
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid purple;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid purple;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1.5s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+@media(max-width:400)
+{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 100%;
+    }
+}
+header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+}
+nav{
+    flex:2;
+}
+.login{
+    flex: 1;
+}
+.logo,.navigation,.login{
+    display: flex;
+}
+.logo{
+    color: #edf0f1;
+    font-size: 50px;
+}
+.navigation{
+    justify-content: space-around;
+    list-style:none;
+}
+.nav-menu{
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+.login{
+    justify-content: flex-end;
+}
+.login a{
+    text-decoration: none;
+    color: #edf0f1;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid white;
+}
+@media screen and (max-width:1024px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.75rem;
+    }
+    .feat_jobs{
+        flex-direction: column;
+        padding: 0;
+        flex: 1;
+        justify-content: center;
+    }
+    .middle1,.middle2,.{
+        width: 100%;
+        height: 150vh;
+    }
+    .box,.box2{
+        width: 40%;
+        height: 60%;
+    }
+    .bottom{
+        justify-content: center;
+        flex: 1;
+        height:30%;
+        width: 100%;
+    }
+}
